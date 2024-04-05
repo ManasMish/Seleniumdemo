@@ -1,0 +1,1 @@
+{"uuid":"2a19fee8-25c5-41b0-a7c8-97f2450944f6","name":"Seleniumdemo","children":["a578d04e-365c-416a-9ee4-ef891451e86f"],"befores":[{"name":"openbrowser","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1712318090632,"stop":1712318110619}],"afters":[],"start":1712318090609,"stop":1712318111008}
