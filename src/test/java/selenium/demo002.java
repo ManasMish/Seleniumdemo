@@ -40,11 +40,11 @@ public class demo002 {
         wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Add Employee")));
         driver.findElement(By.linkText("Add Employee")).click();
         wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.name("firstName")));
-        driver.findElement(By.xpath("//input[@name='firstName']")).sendKeys("mkmis");
-        driver.findElement(By.xpath("//input[@name='middleName']")).sendKeys("Mishra");
+        driver.findElement(By.xpath("//input[@name='firstName']")).sendKeys("mkm");
+        driver.findElement(By.xpath("//input[@name='middleName']")).sendKeys("Mis");
         driver.findElement(By.xpath("//input[@name='lastName']")).sendKeys("ji");
         driver.findElement(By.xpath("(//input[@class='oxd-input oxd-input--active'])[2]")).clear();
-        driver.findElement(By.xpath("(//input[@class='oxd-input oxd-input--active'])[2]")).sendKeys("2358");
+        driver.findElement(By.xpath("(//input[@class='oxd-input oxd-input--active'])[2]")).sendKeys("2958");
         driver.findElement(By.xpath("//button[@type='submit']")).click();
 
         wait.until(ExpectedConditions.elementToBeClickable(By.linkText("PIM")));
@@ -52,7 +52,7 @@ public class demo002 {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
 //        driver.findElement(By.xpath("//i[@class='oxd-icon bi-caret-down-fill']")).click();
-        driver.findElement(By.xpath("(//input[@placeholder='Type for hints...'])[1]")).sendKeys("mkmis Mishra ji");
+        driver.findElement(By.xpath("(//input[@placeholder='Type for hints...'])[1]")).sendKeys("mkm Mis ji");
         driver.findElement(By.xpath("//button[@type='submit']")).click();
 
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='oxd-table orangehrm-employee-list']")));
