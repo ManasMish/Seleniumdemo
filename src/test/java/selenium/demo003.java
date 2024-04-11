@@ -19,6 +19,8 @@ import static com.tta.util.extractint.extractInteger;
 public class demo003 {
     ChromeDriver driver;
     Double total=0.0;
+    Double earned=0.0;
+    Double spent=0.0;
     @BeforeTest
     public void openbrowser(){
         driver=new ChromeDriver();
@@ -47,13 +49,17 @@ public class demo003 {
                 {
                     if(e.getText().contains("+")==true){
                         total=total+Double.parseDouble(extractInteger(e.getText().toString()));
+                        earned=earned+Double.parseDouble(extractInteger(e.getText().toString()));
                     }
                     else{
                         total=total-Double.parseDouble(extractInteger(e.getText().toString()));
+                        spent=spent+Double.parseDouble(extractInteger(e.getText().toString()));
                     }
                 }
             }
         }
+        Assert.assertEquals(2560.22,earned);
+        Assert.assertEquals(564,spent);
         Assert.assertEquals(1996.22,total);
     }
 
